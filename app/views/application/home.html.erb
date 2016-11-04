@@ -1,0 +1,19 @@
+
+<h1>Hello World</h1>
+
+<ul>
+  <% @users.each do |new| %>
+    <%= new.name  %>
+  <% end %>
+
+</ul>
+
+<%= form_for @user do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name%>
+  </p>
+  <%= f.text_field :field_1, class: "form-control" %>
+
+<% end %>
